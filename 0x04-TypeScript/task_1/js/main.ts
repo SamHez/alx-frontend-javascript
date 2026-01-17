@@ -62,7 +62,7 @@ export interface StudentClassInterface {
     displayName(): string;
 }
 
-export class StudentClass implements StudentClassInterface {
+class StudentClass {
     firstName: string;
     lastName: string;
 
