@@ -53,16 +53,16 @@ function printTeacher(firstName: string, lastName: string): string {
 console.log(printTeacher("John", "Doe"));
 
 /* Task 4: Writing a class */
-interface StudentClassConstructor {
+export interface StudentConstructor {
     new(firstName: string, lastName: string): StudentClassInterface;
 }
 
-interface StudentClassInterface {
+export interface StudentClassInterface {
     workOnHomework(): string;
     displayName(): string;
 }
 
-class StudentClass implements StudentClassInterface {
+export class StudentClass implements StudentClassInterface {
     firstName: string;
     lastName: string;
 
@@ -79,7 +79,3 @@ class StudentClass implements StudentClassInterface {
         return this.firstName;
     }
 }
-
-const student = new StudentClass('Jane', 'Doe');
-console.log(student.displayName());
-console.log(student.workOnHomework());
